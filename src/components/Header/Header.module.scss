@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 10px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__item {
+    color: #191919;
+    text-transform: uppercase;
+    margin-left: 15px;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.1;
+    font-weight: 700;
+  }
+}
+
+.active {
+  color: #10c9c3;
+}

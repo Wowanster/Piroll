@@ -1,0 +1,35 @@
+.section {
+  background-image: url(../../../img/home-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 60%;
+  background-attachment: fixed;
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 234px;
+    padding-bottom: 200px;
+  }
+}
+.content {
+  max-width: 478px;
+}
+.title {
+  font-size: 38px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.26;
+  letter-spacing: 0.38px;
+  padding-bottom: 32px;
+}
+.subtitle {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: 0.09px;
+  color: #787878;
+  margin-bottom: 40px;
+}

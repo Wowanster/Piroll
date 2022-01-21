@@ -1,0 +1,15 @@
+.section{
+    background-color: #ffffff;
+}
+.clients{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 64px 0;
+    &__img{
+        width: 25%;
+        height: auto;
+        text-align: center;
+        opacity: 0.5;
+    }
+}   

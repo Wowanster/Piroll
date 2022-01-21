@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Footer from "./components/Footer/Footer";
+import { Route, Switch } from "react-router";
+import Work from "./components/Work/Work";
+import Contact from "./components/Contact/Contact";
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="wrapper">
+        <Header />
+        <Switch>
+          <Route path="/home" render={ ()=> <Home state={props.state} addForm={props.addForm} />} />
+          <Route path="/about" render={ ()=> <About/>} />
+          <Route path="/work" render={ ()=> <Work state={props.state} />} />
+          <Route path="/contact" render={ ()=> <Contact  state={props.state} addForm={props.addForm}/>} />
+          <Route path="/" render={ ()=> <Home state={props.state} addForm={props.addForm} />} />
+        </Switch>
+        <Footer />
+      </div>
   );
 }
 
