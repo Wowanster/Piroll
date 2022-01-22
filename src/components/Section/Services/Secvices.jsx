@@ -4,8 +4,8 @@ import classes from "./Services.module.scss";
 
 
 const Services = (props) => {
-
-let block=props.state.services.map( e => <div className = { classes.card }>
+    let state=props.state.getState();
+let block=state.services.map( e => <div className = { classes.card }>
     <div className = { classes.card__img }>
         <img src = { e.icons } alt="images"></img>
     </div>

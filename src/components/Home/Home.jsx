@@ -21,7 +21,7 @@ let Main = ( props ) => {
       < OurWork />
       < Services state = { props.state } />
       < Clients state = { props.state }/>
-      < Need state = { props.state } addForm={props.addForm} />
+      < Need state = { props.state } />
     </main>
   );
 };
