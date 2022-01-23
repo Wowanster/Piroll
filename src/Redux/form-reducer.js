@@ -4,11 +4,14 @@ let UPDATE_NEW_EMAIL='UPDATE_NEW_EMAIL';
 let UPDATE_NEW_TITLE='UPDATE_NEW_TITLE';
 let UPDATE_NEW_COMMENT='UPDATE_NEW_COMMENT';
 
-const formReducer=(state, action)=>{
+let ititialState={name:'', email:'', title:'', comment:'', newYourName:'', newEmail:'', newTitle:'', newComment:''}
+
+const formReducer=(state=ititialState, action)=>{
     if(action.type===UPDATE_NEW_YOUR_NAME){
         state.newYourName=action.newName;  
     } else if  
     (action.type===SEND_FORM){
+        
         let newName=state.newYourName;
         let newEmail=state.newEmail;
         let newTitle=state.newTitle;
@@ -19,12 +22,12 @@ const formReducer=(state, action)=>{
         state.newTitle='';
         state.newComment='';
 
-        state.form[0].name=newName;
-        state.form[0].email=newEmail;
-        state.form[0].title=newTitle;
-        state.form[0].comment=newComment;
+        state.name=newName;
+        state.email=newEmail;
+        state.title=newTitle;
+        state.comment=newComment;
         
-        console.log(state.form);
+        console.log(state);
         
     } else if
     (action.type===UPDATE_NEW_EMAIL){

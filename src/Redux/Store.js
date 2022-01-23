@@ -52,11 +52,7 @@ let store={
     
         clients:[client1,client2,client3,client4,client5],
     
-        form:[{name:'', email:'', title:'', comment:''}],
-        newYourName:'',
-        newEmail:'',
-        newTitle:'',
-        newComment:'',
+        form:{name:'', email:'', title:'', comment:'', newYourName:'', newEmail:'', newTitle:'', newComment:''},
     },
     getState(){
        return this._state
@@ -65,9 +61,8 @@ let store={
         console.log('render')
     },
     dispatch(action){
-        
-        this._state=formReducer(this._state, action);
-        this.renderEntire(store)
+        this._state.form=formReducer(this._state.form, action);
+        this.renderEntire(store);
     },
     subscribe(observer){
         this.renderEntire=observer;
@@ -75,7 +70,8 @@ let store={
 }
 export const updateCommentCreator=(comment)=>({type:UPDATE_NEW_COMMENT, newComment:comment});
 export const updateTitleCreator=(title)=>({type:UPDATE_NEW_TITLE, newTitle:title});
-export const updateNewEmailCreator=(email)=>({type:UPDATE_NEW_EMAIL, newEmail:email})
+export const updateNewEmailCreator=(email)=>({type:UPDATE_NEW_EMAIL, newEmail:email});
+
 export const sendFormCreator=()=>({type:SEND_FORM});
 export const updateYorNameCreator=(name)=>({type:UPDATE_NEW_YOUR_NAME, newName:name});
 

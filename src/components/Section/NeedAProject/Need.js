@@ -5,8 +5,6 @@ import {updateYorNameCreator, sendFormCreator,updateNewEmailCreator,updateTitleC
 const Need = (props) => {
   
  
-   let inputTitle=React.createRef();
-   let inputText=React.createRef();
 
    let send=(event)=>{
     event.preventDefault();
@@ -28,11 +26,11 @@ const Need = (props) => {
         let comment=event.target.value;
         props.state.dispatch(updateCommentCreator(comment))
     }
-
-    let Name=props.state.getState().newYourName;
-    let Email=props.state.getState().newEmail;
-    let Title=props.state.getState().newTitle;
-    let Comment=props.state.getState().newComment;
+   
+    let Name=props.state.getState().form.newYourName;
+    let Email=props.state.getState().form.newEmail;
+    let Title=props.state.getState().form.newTitle;
+    let Comment=props.state.getState().form.newComment;
     return(
         <section className = { classes.section}>
             <div className = "container">

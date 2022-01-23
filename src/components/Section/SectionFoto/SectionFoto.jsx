@@ -4,7 +4,7 @@ import classes from "./SectionFoto.module.scss";
 
 
 const SectionFoto = ( props ) => {
- 
+ debugger
   let state=props.state.getState();
   let images = state.images.map( n=>
     <a href="# " className = { classes.item }>
