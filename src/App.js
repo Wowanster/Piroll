@@ -13,11 +13,11 @@ function App(props) {
       <div className="wrapper">
         <Header />
         <Switch>
-          <Route path="/home" render={ ()=> <Home state={props.state} />} />
+          <Route path="/home" render={ ()=> <Home store={props.store} />} />
           <Route path="/about" render={ ()=> <About/>} />
-          <Route path="/work" render={ ()=> <Work state={props.state} />} />
-          <Route path="/contact" render={ ()=> <Contact  state={props.state} />} />
-          <Route path="/" render={ ()=> <Home state={props.state} />} />
+          <Route path="/work" render={ ()=> <Work />} />
+          <Route path="/contact" render={ ()=> <Contact />} />
+          <Route path="/" render={ ()=> <Home store={props.store} />} />
         </Switch>
         <Footer />
       </div>

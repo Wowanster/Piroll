@@ -3,12 +3,12 @@ import SectionHeader from "../Section/SectionHeader/SectionHeader";
 import SectionAbout from "../Section/SectionAbout/SectionAbou";
 import ProfessionalSkill from "../Section/ProfessionalSkill/ProfessionalSkill";
 import Projects from "../Section/Projects/Projects";
-import SectionFoto from "../Section/SectionFoto/SectionFoto";
 import OurWork from "../Section/OurWork/OurWork";
 import Services from "../Section/Services/Secvices";
 import "./Home.scss";
 import Clients from "../Section/Clients/Clients";
-import Need from "../Section/NeedAProject/Need";
+import NeedContainer from "../Section/NeedAProject/NeedContainer";
+import SectionFotoContainer from "../Section/SectionFoto/SectionFotoContainer";
 
 let Main = ( props ) => {
   return (
@@ -17,11 +17,11 @@ let Main = ( props ) => {
       < SectionAbout />
       < ProfessionalSkill />
       < Projects />
-      < SectionFoto state = { props.state }/>
+      < SectionFotoContainer />
       < OurWork />
-      < Services state = { props.state } />
-      < Clients state = { props.state }/>
-      < Need state = { props.state } />
+      < Services store = { props.store } />
+      < Clients store = { props.store }/>
+      < NeedContainer />
     </main>
   );
 };

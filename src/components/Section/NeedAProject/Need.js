@@ -1,36 +1,30 @@
 import React from "react";
 import classes from "./Need.module.scss";
-import {updateYorNameCreator, sendFormCreator,updateNewEmailCreator,updateTitleCreator, updateCommentCreator} from "../../../Redux/Store";
+
 
 const Need = (props) => {
-  
- 
-
-   let send=(event)=>{
+    let onSend=(event)=>{
     event.preventDefault();
-    props.state.dispatch(sendFormCreator());
-   }
-   let updateName=(event)=>{
-      let newName=event.target.value;
-      props.state.dispatch(updateYorNameCreator(newName));
-   } 
-   let updateEmail=(event)=>{
+    props.send();
+    }
+    let onUpdateName=(event)=>{
+    let newName=event.target.value;
+      props.updateName(newName);
+    } 
+   let onUpdateEmail=(event)=>{
        let newEmail=event.target.value;
-       props.state.dispatch(updateNewEmailCreator(newEmail))
+       props.updateEmail(newEmail);
     }
-    let updateTitle=(event)=>{
+    let onUpdateTitle=(event)=>{
         let title=event.target.value;
-        props.state.dispatch(updateTitleCreator(title))
+        props.updateTitle(title);
     }
-    let updateComment=(event)=>{
+    let onUpdateComment=(event)=>{
         let comment=event.target.value;
-        props.state.dispatch(updateCommentCreator(comment))
+        props.updateComment(comment);
     }
    
-    let Name=props.state.getState().form.newYourName;
-    let Email=props.state.getState().form.newEmail;
-    let Title=props.state.getState().form.newTitle;
-    let Comment=props.state.getState().form.newComment;
+
     return(
         <section className = { classes.section}>
             <div className = "container">
@@ -40,30 +34,30 @@ const Need = (props) => {
                     if this could be the start of something beautiful.</span>
                     <form className = {classes.form}>
                         <input type="text" 
-                        onChange={updateName}
+                        onChange={onUpdateName}
                         placeholder="Your Name" 
-                        value={Name} 
+                        value={props.Name} 
                         className = { classes.form__name } 
                        ></input>
                         <input type="email" 
                         placeholder="Your Email" 
                         className = { classes.form__email }
-                        onChange={updateEmail}
-                        value={Email}
+                        onChange={onUpdateEmail}
+                        value={props.Email}
                         ></input>
                         <input type="text" 
                         placeholder="Your Title" 
                         className = { classes.form__title } 
-                        onChange={updateTitle}
-                        value={Title}
+                        onChange={onUpdateTitle}
+                        value={props.Title}
                         ></input>
                         <textarea type="text"
                         placeholder="Your Comment"
                         className = { classes.form__comment }
-                        onChange={updateComment}
-                        value={Comment}
+                        onChange={onUpdateComment}
+                        value={props.Comment}
                         ></textarea>
-                        <button type="submit" className = { classes.form__submit} onClick={send}>send message</button>
+                        <button type="submit" className = { classes.form__submit} onClick={onSend}>send message</button>
                     </form>
                 </div>
             </div>

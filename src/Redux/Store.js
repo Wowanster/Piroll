@@ -71,7 +71,6 @@ let store={
 export const updateCommentCreator=(comment)=>({type:UPDATE_NEW_COMMENT, newComment:comment});
 export const updateTitleCreator=(title)=>({type:UPDATE_NEW_TITLE, newTitle:title});
 export const updateNewEmailCreator=(email)=>({type:UPDATE_NEW_EMAIL, newEmail:email});
-
 export const sendFormCreator=()=>({type:SEND_FORM});
 export const updateYorNameCreator=(name)=>({type:UPDATE_NEW_YOUR_NAME, newName:name});
 

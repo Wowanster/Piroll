@@ -6,7 +6,7 @@ import clientsReducer from "./clients-reducer";
 
 let reducers=combineReducers({
     form:formReducer,
-    images:portfolioReducer,
+    portfolio:portfolioReducer,
     services:servicesReducer,
     clients:clientsReducer,
 });

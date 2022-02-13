@@ -1,11 +1,10 @@
 import React from "react";
-import Need from "../Section/NeedAProject/Need";
+import NeedContainer from "../Section/NeedAProject/NeedContainer";
 
 const Contact=(props)=>{
     return(
         <main className="main">
-        
-             < Need state={ props.state } addForm={props.addForm} />
+             < NeedContainer/>
         </main>
     )
 }
