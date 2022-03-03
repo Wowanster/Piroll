@@ -1,6 +1,6 @@
 import React from "react";
 import about from "./SectionAbout.module.scss";
-import signature from "../../../img/signature.svg";
+import signature from "../../../img/signature.png";
 
 const SectionAbout = () => {
   return (
@@ -14,7 +14,7 @@ const SectionAbout = () => {
           all.
         </div>
         <div className = { about.signature }>
-          <img src = { signature } alt = ""></img>
+          <img src = { signature } alt ="signature"/>
         </div>
       </div>
     </section>

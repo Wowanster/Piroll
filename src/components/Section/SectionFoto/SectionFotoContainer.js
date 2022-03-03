@@ -1,21 +1,19 @@
 
 import { connect } from "react-redux";
 import SectionFoto from "./SectionFotoClass";
-import { getImages} from "../../../Redux/portfolio-reducer";
+import { setImages, toogleIsFetching, loadMore, setTotalCount, setModalFoto} from "../../../Redux/portfolio-reducer";
 
 
 const stateToProps = ( state ) => {
 return{
-  images:state.portfolio.images
+  images:state.portfolio.images,
+  isFetching:state.portfolio.isFetching,
+  page:state.portfolio.page,
+  totalCount:state.portfolio.totalCount,
+  modalFoto:state.portfolio.modalFoto
   }
 }
-const dispatchToProps=(dispatch)=>{
-  return{
-    setImages:(images)=>{
-      dispatch(getImages(images));
-    }
-  }
-}
-let SectionFotoContainer=connect(stateToProps,dispatchToProps)(SectionFoto);
+
+let SectionFotoContainer=connect(stateToProps, {setImages, toogleIsFetching, loadMore, setTotalCount, setModalFoto})(SectionFoto);
 
 export default SectionFotoContainer;

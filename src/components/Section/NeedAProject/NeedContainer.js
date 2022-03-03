@@ -1,6 +1,6 @@
 
 import { connect } from "react-redux";
-import {updateYorNameCreator, sendFormCreator,updateNewEmailCreator,updateTitleCreator, updateCommentCreator} from "../../../Redux/form-reducer";
+import {updateComment,updateTitle,updateEmail,sendForm,updateYorName} from "../../../Redux/form-reducer";
 import Need from "./Need";
 
 let stateToProps=(state)=>{
@@ -11,25 +11,7 @@ let stateToProps=(state)=>{
         Comment: state.form.newComment,
     }
 }
-let dispatchToProps=(dispatch)=>{
-    return{
-        send: () =>{
-            dispatch(sendFormCreator());
-        },
-        updateName: (newName) =>{
-            dispatch(updateYorNameCreator(newName));
-        },
-        updateEmail: (newEmail) =>{
-            dispatch(updateNewEmailCreator(newEmail))
-        },
-        updateTitle: (title) =>{
-            dispatch(updateTitleCreator(title))
-        },
-        updateComment: (comment) =>{
-            dispatch(updateCommentCreator(comment))
-        }
-    }
-}
-const NeedContainer=connect(stateToProps, dispatchToProps)(Need);
+
+const NeedContainer=connect(stateToProps, {updateComment,updateTitle,updateEmail,sendForm,updateYorName})(Need);
 
 export default NeedContainer;

@@ -5,11 +5,11 @@ import classes from "./Need.module.scss";
 const Need = (props) => {
     let onSend=(event)=>{
     event.preventDefault();
-    props.send();
+    props.sendForm();
     }
     let onUpdateName=(event)=>{
     let newName=event.target.value;
-      props.updateName(newName);
+      props.updateYorName(newName);
     } 
    let onUpdateEmail=(event)=>{
        let newEmail=event.target.value;

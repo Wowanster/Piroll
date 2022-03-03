@@ -52,11 +52,11 @@ const formReducer=(state=ititialState, action)=>{
 }
 
 
-export const updateCommentCreator=(comment)=>({type:UPDATE_NEW_COMMENT, newComment:comment});
-export const updateTitleCreator=(title)=>({type:UPDATE_NEW_TITLE, newTitle:title});
-export const updateNewEmailCreator=(email)=>({type:UPDATE_NEW_EMAIL, newEmail:email});
-export const sendFormCreator=()=>({type:SEND_FORM});
-export const updateYorNameCreator=(name)=>({type:UPDATE_NEW_YOUR_NAME, newName:name});
+export const updateComment=(comment)=>({type:UPDATE_NEW_COMMENT, newComment:comment});
+export const updateTitle=(title)=>({type:UPDATE_NEW_TITLE, newTitle:title});
+export const updateEmail=(email)=>({type:UPDATE_NEW_EMAIL, newEmail:email});
+export const sendForm=()=>({type:SEND_FORM});
+export const updateYorName=(name)=>({type:UPDATE_NEW_YOUR_NAME, newName:name});
 
 export default formReducer;
 
