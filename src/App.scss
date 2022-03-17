@@ -8,6 +8,8 @@ font-family: 'Nunito Sans', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: none;
+  outline: none;
 }
 
 body {
@@ -39,20 +41,20 @@ a {
   font-size: 12px;
   font-weight: 500;
 }
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
 }
 
-@media(max-width:992px){
-  .container{
+@media (max-width: 992px) {
+  .container {
     padding: 0 50px;
   }
 }
-@media(max-width:768px){
-  .container{
+@media (max-width: 768px) {
+  .container {
     padding: 0 20px;
   }
 }

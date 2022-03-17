@@ -10,17 +10,17 @@ import Contact from "./components/Contact/Contact";
 
 function App(props) {
   return (
-      <div className="wrapper">
-        <Header />
-        <Switch>
-          <Route path="/home" render={ ()=> <Home store={props.store} />} />
-          <Route path="/about" render={ ()=> <About/>} />
-          <Route path="/work" render={ ()=> <Work />} />
-          <Route path="/contact" render={ ()=> <Contact />} />
-          <Route path="/" render={ ()=> <Home store={props.store} />} />
-        </Switch>
-        <Footer />
-      </div>
+    <div className="wrapper">
+      <Header />
+      <Switch>
+        <Route path="/home" render={() => <Home store={props.store} />} />
+        <Route path="/about" render={() => <About />} />
+        <Route path="/work" render={() => <Work />} />
+        <Route path="/contact" render={() => <Contact />} />
+        <Route path="/" render={() => <Home store={props.store} />} />
+      </Switch>
+      <Footer />
+    </div>
   );
 }
 

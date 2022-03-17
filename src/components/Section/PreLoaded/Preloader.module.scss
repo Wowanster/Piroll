@@ -1,19 +1,19 @@
-.background{
-    background-color: black;
-    opacity: 0.6;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-   overflow: hidden;
+.background {
+  background-color: black;
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  overflow: hidden;
 }
 
-.loader{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    top:50%;
-    fill:#10c9c3;
+.loader {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  fill: #10c9c3;
 }

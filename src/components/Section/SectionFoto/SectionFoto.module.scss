@@ -2,14 +2,15 @@
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-
 }
 .item {
   width: 25%;
   height: auto;
   background-color: #838383;
-  position: relative;
   opacity: 1;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
   &::after {
     content: "";
     position: absolute;
@@ -49,11 +50,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
 }
 
-@media(max-width:768px){
-  .item{
+@media (max-width: 768px) {
+  .item {
     width: 50%;
-    }
+  }
 }

@@ -23,23 +23,23 @@
   margin-bottom: 100px;
 }
 
-@media(max-width:992px){
-  .title{
+@media (max-width: 992px) {
+  .title {
     margin-top: 50px;
   }
-  .subtitle{
+  .subtitle {
     max-width: 80%;
   }
-  .signature{
+  .signature {
     margin-bottom: 50px;
   }
 }
 
-@media(max-width:768px){
-  .title{
+@media (max-width: 768px) {
+  .title {
     margin-bottom: 10px;
   }
-  .subtitle{
+  .subtitle {
     padding-bottom: 10px;
     max-width: 100%;
   }

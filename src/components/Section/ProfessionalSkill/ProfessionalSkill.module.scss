@@ -60,19 +60,19 @@
   }
 }
 
-@media(max-width:992px){
-  .skils{
-    padding: 80px 40px 80px 50px;
+@media (max-width: 992px) {
+  .skils {
+    padding: 50px 20px 50px 20px;
   }
 }
-@media(max-width:768px){
-  .wrapper{
+@media (max-width: 768px) {
+  .wrapper {
     flex-wrap: wrap;
   }
-  .skils{
+  .skils {
     width: 100%;
   }
-  .intro{
+  .intro {
     width: 100%;
   }
 }

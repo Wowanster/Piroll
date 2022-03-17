@@ -10,18 +10,18 @@ import Clients from "../Section/Clients/Clients";
 import NeedContainer from "../Section/NeedAProject/NeedContainer";
 import SectionFotoContainer from "../Section/SectionFoto/SectionFotoContainer";
 
-let Main = ( props ) => {
+let Main = (props) => {
   return (
-    <main className = "main">
-      < SectionHeader />
-      < SectionAbout />
-      < ProfessionalSkill />
-      < Projects />
-      < SectionFotoContainer />
-      < OurWork />
-      < Services store = { props.store } />
-      < Clients store = { props.store }/>
-      < NeedContainer />
+    <main className="main">
+      <SectionHeader />
+      <SectionAbout />
+      <ProfessionalSkill />
+      <Projects />
+      <SectionFotoContainer />
+      <OurWork />
+      <Services store={props.store} />
+      <Clients store={props.store} />
+      <NeedContainer />
     </main>
   );
 };
