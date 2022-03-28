@@ -1,12 +1,10 @@
 import { connect } from "react-redux";
 import SectionFoto from "./SectionFotoClass";
 import {
-  setImages,
-  toogleIsFetching,
-  loadMore,
-  setTotalCount,
   setModalFoto,
   tooglemodal,
+  addImages,
+  loadImages,
 } from "../../../Redux/portfolio-reducer";
 
 const stateToProps = (state) => {
@@ -21,12 +19,10 @@ const stateToProps = (state) => {
 };
 
 let SectionFotoContainer = connect(stateToProps, {
-  setImages,
-  toogleIsFetching,
-  loadMore,
-  setTotalCount,
   setModalFoto,
   tooglemodal,
+  addImages,
+  loadImages,
 })(SectionFoto);
 
 export default SectionFotoContainer;

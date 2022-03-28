@@ -7,7 +7,7 @@ import OurWork from "../Section/OurWork/OurWork";
 import Services from "../Section/Services/Secvices";
 import "./Home.scss";
 import Clients from "../Section/Clients/Clients";
-import NeedContainer from "../Section/NeedAProject/NeedContainer";
+import Need from "../Section/NeedAProject/Need";
 import SectionFotoContainer from "../Section/SectionFoto/SectionFotoContainer";
 
 let Main = (props) => {
@@ -21,7 +21,7 @@ let Main = (props) => {
       <OurWork />
       <Services store={props.store} />
       <Clients store={props.store} />
-      <NeedContainer />
+      <Need/>
     </main>
   );
 };

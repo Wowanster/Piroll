@@ -1,26 +1,60 @@
 import React from "react";
 import classes from "./Need.module.scss";
+import { Field, reduxForm } from "redux-form";
+
+const FormMessage = (props) => {
+  return (
+    <form className={classes.form} onSubmit={props.handleSubmit}>
+      <Field
+        type="text"
+        component={"input"}
+        //onChange={onUpdateName}
+        placeholder="Your Name"
+        name={"name"}
+        className={classes.form__name}
+      />
+      <Field
+        type="email"
+        component={"input"}
+        placeholder="Your Email"
+        name={"email"}
+        className={classes.form__email}
+        //onChange={onUpdateEmail}
+      />
+      <Field
+        type="text"
+        component={"input"}
+        placeholder="Your Title"
+        name={"title"}
+        className={classes.form__title}
+        //onChange={onUpdateTitle}
+      />
+      <Field
+        type="text"
+        component={"textarea"}
+        placeholder="Your Comment"
+        name={"comment"}
+        className={classes.form__comment}
+        //onChange={onUpdateComment}
+        //textarea
+      />
+      <button
+        className={classes.form__submit}
+        //onClick={onSend}
+      >
+        send message
+      </button>
+    </form>
+  );
+};
+
+const ReduxFormMessage = reduxForm({
+  form: "formMessage",
+})(FormMessage);
 
 const Need = (props) => {
-  let onSend = (event) => {
-    event.preventDefault();
-    props.sendForm();
-  };
-  let onUpdateName = (event) => {
-    let newName = event.target.value;
-    props.updateYorName(newName);
-  };
-  let onUpdateEmail = (event) => {
-    let newEmail = event.target.value;
-    props.updateEmail(newEmail);
-  };
-  let onUpdateTitle = (event) => {
-    let title = event.target.value;
-    props.updateTitle(title);
-  };
-  let onUpdateComment = (event) => {
-    let comment = event.target.value;
-    props.updateComment(comment);
+  let onSubmit = (formData) => {
+    console.log(formData);
   };
 
   return (
@@ -32,43 +66,7 @@ const Need = (props) => {
             Let us know what you're looking for in an agency. We'll take a look
             and see if this could be the start of something beautiful.
           </span>
-          <form className={classes.form}>
-            <input
-              type="text"
-              onChange={onUpdateName}
-              placeholder="Your Name"
-              value={props.Name}
-              className={classes.form__name}
-            ></input>
-            <input
-              type="email"
-              placeholder="Your Email"
-              className={classes.form__email}
-              onChange={onUpdateEmail}
-              value={props.Email}
-            ></input>
-            <input
-              type="text"
-              placeholder="Your Title"
-              className={classes.form__title}
-              onChange={onUpdateTitle}
-              value={props.Title}
-            ></input>
-            <textarea
-              type="text"
-              placeholder="Your Comment"
-              className={classes.form__comment}
-              onChange={onUpdateComment}
-              value={props.Comment}
-            ></textarea>
-            <button
-              type="submit"
-              className={classes.form__submit}
-              onClick={onSend}
-            >
-              send message
-            </button>
-          </form>
+          <ReduxFormMessage onSubmit={onSubmit} />
         </div>
       </div>
     </section>

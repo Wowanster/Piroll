@@ -29,4 +29,5 @@ const ModalFoto = (modal) => {
     </div>
   );
 };
+
 export default ModalFoto;

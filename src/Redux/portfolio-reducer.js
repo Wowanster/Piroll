@@ -1,3 +1,5 @@
+import { imagesAPI } from "../api/api";
+
 let GET_IMAGES = "GET_IMAGES";
 let TOOGLE_IS_FETCHING = "TOOGLE_IS_FETCHING";
 let LOAD_MORE = "LOAD_MORE";
@@ -62,9 +64,35 @@ export const toogleIsFetching = (isFetching) => ({
   type: TOOGLE_IS_FETCHING,
   isFetching,
 });
-export const loadMore = (e) => ({ type: LOAD_MORE, e });
+export const loadMore = () => ({ type: LOAD_MORE });
 export const setTotalCount = (count) => ({ type: TOTAL_COUNT, count });
 export const setModalFoto = (modalFoto) => ({ type: MODAL_FOTO, modalFoto });
 export const tooglemodal = (modal) => ({ type: CLOSE_MODAL, modal });
+
+export const addImages = (page, limit) => {
+  return (dispatch) => {
+    dispatch(toogleIsFetching(true));
+    imagesAPI
+      .getImages(page, limit)
+      .then((response) => {
+        dispatch(setImages(response.data));
+        dispatch(setTotalCount(+response.headers["x-total-count"]));
+        dispatch(toogleIsFetching(false));
+      })
+      .catch(dispatch(toogleIsFetching(false)));
+  };
+};
+
+export const loadImages = (page, limit) => {
+  return (dispatch) => {
+    dispatch(loadMore());
+    dispatch(toogleIsFetching(true));
+    imagesAPI.getImages(page, limit).then((response) => {
+      dispatch(setImages(response.data));
+      dispatch(toogleIsFetching(false));
+    });
+   
+  };
+};
 
 export default portfolioReducer;

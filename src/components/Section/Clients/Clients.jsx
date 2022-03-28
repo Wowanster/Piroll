@@ -11,7 +11,7 @@ const Clients = (props) => {
 
   return (
     <section className={clases.section}>
-      <div className={`container`}>
+      <div className={"container"}>
         <div className={clases.clients}>{clients}</div>
       </div>
     </section>
