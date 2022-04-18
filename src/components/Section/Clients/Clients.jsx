@@ -1,9 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
 import clases from "./Clients.module.scss";
 
 const Clients = (props) => {
-  let state = props.store.getState();
-  let clients = state.clients.map((e) => (
+
+  let clients = props.clients.map((e) => (
     <div className={clases.clients__block} key={e.id}>
       <img src={e.url} alt="images" className={clases.clients__images} />
     </div>
@@ -18,4 +19,10 @@ const Clients = (props) => {
   );
 };
 
-export default Clients;
+const stateToProps = (state) => {
+  return {
+    clients: state.clients,
+  };
+};
+
+export default connect(stateToProps)(Clients);

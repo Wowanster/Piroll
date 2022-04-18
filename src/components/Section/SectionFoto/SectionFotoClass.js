@@ -3,16 +3,15 @@ import classes from "./SectionFoto.module.scss";
 import Preloader from "../PreLoaded/Preloader";
 import ModalFoto from "../ModalFoto/ModalFoto";
 
-
 class SectionFoto extends React.Component {
   componentDidMount() {
     if (this.props.images.length === 0) {
-      this.props.addImages(1, 8)
+      this.props.addImages(0, 8);
     }
   }
 
   loadMore = () => {
-    this.props.loadImages(this.props.page, 4)
+    this.props.loadImages(this.props.pageStart, this.props.pageEnd);
   };
 
   modalFoto = (e) => {
@@ -22,19 +21,19 @@ class SectionFoto extends React.Component {
 
   render() {
     let images =
-      this.props.images.length > 0 ? (
-        this.props.images.map((n) => (
-          <button
-            className={classes.item}
-            key={n.id}
-            onClick={(e) => {
-              this.modalFoto(e);
-            }}
-          >
-            <img src={n.url} className={classes.foto} alt="images" />
-          </button>
-        ))
-      ) : null;
+      this.props.images.length > 0
+        ? this.props.images.map((n) => (
+            <button
+              className={classes.item}
+              key={n.id}
+              onClick={(e) => {
+                this.modalFoto(e);
+              }}
+            >
+              <img src={n.url} className={classes.foto} alt="images" />
+            </button>
+          ))
+        : null;
 
     return (
       <>

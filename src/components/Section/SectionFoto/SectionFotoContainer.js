@@ -11,7 +11,8 @@ const stateToProps = (state) => {
   return {
     images: state.portfolio.images,
     isFetching: state.portfolio.isFetching,
-    page: state.portfolio.page,
+    pageStart: state.portfolio.pageStart,
+    pageEnd: state.portfolio.pageEnd,
     totalCount: state.portfolio.totalCount,
     modalFoto: state.portfolio.modalFoto,
     isOpen: state.portfolio.isOpen,

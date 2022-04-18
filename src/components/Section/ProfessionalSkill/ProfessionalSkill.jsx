@@ -20,4 +20,4 @@ const ProfessionalSkill = () => {
   );
 };
 
-export default ProfessionalSkill;
+export default React.memo(ProfessionalSkill);

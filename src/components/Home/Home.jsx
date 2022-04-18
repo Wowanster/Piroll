@@ -5,12 +5,11 @@ import ProfessionalSkill from "../Section/ProfessionalSkill/ProfessionalSkill";
 import Projects from "../Section/Projects/Projects";
 import OurWork from "../Section/OurWork/OurWork";
 import Services from "../Section/Services/Secvices";
-import "./Home.scss";
 import Clients from "../Section/Clients/Clients";
 import Need from "../Section/NeedAProject/Need";
 import SectionFotoContainer from "../Section/SectionFoto/SectionFotoContainer";
 
-let Main = (props) => {
+let Home = () => {
   return (
     <main className="main">
       <SectionHeader />
@@ -19,11 +18,11 @@ let Main = (props) => {
       <Projects />
       <SectionFotoContainer />
       <OurWork />
-      <Services store={props.store} />
-      <Clients store={props.store} />
+      <Services />
+      <Clients />
       <Need/>
     </main>
   );
 };
 
-export default Main;
+export default Home;

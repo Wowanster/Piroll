@@ -24,8 +24,7 @@
   transform: translate(-50%, -50%);
   z-index: 99;
   margin: 0 auto;
-  max-width: 45%;
-  height: auto;
+  height: 80vh;
 }
 .close {
   fill: #10c9c3;
@@ -42,5 +41,7 @@
 @media (max-width: 768px) {
   .foto {
     max-width: 70%;
+    height: auto;
   }
 }
+

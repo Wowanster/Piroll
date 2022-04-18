@@ -1,49 +1,56 @@
 import React from "react";
 import classes from "./Need.module.scss";
 import { Field, reduxForm } from "redux-form";
+import {
+  requaired,
+  maxlength,
+  emailValidate,
+} from "../../FormValidator/FormValidator";
+import { Input, Textarea } from "../../FormValidator/FormControl";
+
+let maximumLength30 = maxlength(30);
+let maximumLength500 = maxlength(500);
 
 const FormMessage = (props) => {
   return (
     <form className={classes.form} onSubmit={props.handleSubmit}>
-      <Field
-        type="text"
-        component={"input"}
-        //onChange={onUpdateName}
-        placeholder="Your Name"
-        name={"name"}
-        className={classes.form__name}
-      />
-      <Field
-        type="email"
-        component={"input"}
-        placeholder="Your Email"
-        name={"email"}
-        className={classes.form__email}
-        //onChange={onUpdateEmail}
-      />
-      <Field
-        type="text"
-        component={"input"}
-        placeholder="Your Title"
-        name={"title"}
-        className={classes.form__title}
-        //onChange={onUpdateTitle}
-      />
-      <Field
-        type="text"
-        component={"textarea"}
-        placeholder="Your Comment"
-        name={"comment"}
-        className={classes.form__comment}
-        //onChange={onUpdateComment}
-        //textarea
-      />
-      <button
-        className={classes.form__submit}
-        //onClick={onSend}
-      >
-        send message
-      </button>
+      <div className={classes.form__name}>
+        <Field
+          type="text"
+          component={Input}
+          placeholder="Your Name"
+          name={"name"}
+          validate={[requaired, maximumLength30]}
+        />
+      </div>
+      <div className={classes.form__email}>
+        <Field
+          type="text"
+          component={Input}
+          placeholder="Your Email"
+          name={"email"}
+          validate={[requaired, maximumLength30, emailValidate]}
+        />
+      </div>
+      <div className={classes.form__title}>
+        <Field
+          type="text"
+          component={Input}
+          placeholder="Your Title"
+          name={"title"}
+          validate={[requaired, maximumLength30]}
+        />
+      </div>
+      <div className={classes.form__comment}>
+        <Field
+          type="text"
+          component={Textarea}
+          placeholder="Your Comment"
+          name={"comment"}
+          validate={[requaired, maximumLength500]}
+        />
+      </div>
+      <button className={classes.form__submit}>send message</button>
     </form>
   );
 };

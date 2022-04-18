@@ -19,18 +19,25 @@
     max-width: 60%;
   }
 }
+.input_wrapper{
+  position: relative;
+}
 input,
 textarea {
   border: none;
   background-color: #ffffff;
   padding: 18px 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   resize: none;
+  width: 100%;
   &::placeholder {
     color: #787878;
     font-size: 15px;
     line-height: 1.5;
   }
+}
+textarea{
+  height: 170px;
 }
 .form {
   display: flex;
@@ -38,19 +45,23 @@ textarea {
   width: 70%;
   flex-wrap: wrap;
   &__name {
+    position: relative;
     width: 48%;
   }
   &__email {
+    position: relative;
     width: 48%;
   }
   &__title {
+    position: relative;
     width: 100%;
   }
   &__comment {
+    position: relative;
     width: 100%;
-    height: 170px;
   }
   &__submit {
+    position: relative;
     color: #ffffff;
     text-transform: uppercase;
     font-size: 12px;
@@ -84,9 +95,5 @@ textarea {
 @media (max-width: 768px) {
   .form {
     width: 100%;
-  }
-  input,
-  textarea {
-    margin-bottom: 10px;
   }
 }

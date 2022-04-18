@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
@@ -13,11 +12,11 @@ function App(props) {
     <div className="wrapper">
       <Header />
       <Switch>
-        <Route path="/home" render={() => <Home store={props.store} />} />
+        <Route path="/home" render={() => <Home />} />
         <Route path="/about" render={() => <About />} />
         <Route path="/work" render={() => <Work />} />
         <Route path="/contact" render={() => <Contact />} />
-        <Route path="/" render={() => <Home store={props.store} />} />
+        <Route path="/" render={() => <Home />} />
       </Switch>
       <Footer />
     </div>
