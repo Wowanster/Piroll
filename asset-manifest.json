@@ -1,25 +1,23 @@
 {
   "files": {
-    "main.css": "/Wowanster/Piroll/static/css/main.b28eab37.chunk.css",
-    "main.js": "/Wowanster/Piroll/static/js/main.d9528a1c.chunk.js",
-    "main.js.map": "/Wowanster/Piroll/static/js/main.d9528a1c.chunk.js.map",
-    "runtime-main.js": "/Wowanster/Piroll/static/js/runtime-main.8ed36865.js",
-    "runtime-main.js.map": "/Wowanster/Piroll/static/js/runtime-main.8ed36865.js.map",
-    "static/js/2.24ffc7cf.chunk.js": "/Wowanster/Piroll/static/js/2.24ffc7cf.chunk.js",
-    "static/js/2.24ffc7cf.chunk.js.map": "/Wowanster/Piroll/static/js/2.24ffc7cf.chunk.js.map",
-    "static/js/3.8aaca627.chunk.js": "/Wowanster/Piroll/static/js/3.8aaca627.chunk.js",
-    "static/js/3.8aaca627.chunk.js.map": "/Wowanster/Piroll/static/js/3.8aaca627.chunk.js.map",
-    "index.html": "/Wowanster/Piroll/index.html",
-    "static/css/main.b28eab37.chunk.css.map": "/Wowanster/Piroll/static/css/main.b28eab37.chunk.css.map",
-    "static/js/2.24ffc7cf.chunk.js.LICENSE.txt": "/Wowanster/Piroll/static/js/2.24ffc7cf.chunk.js.LICENSE.txt",
-    "static/media/Marketing_1280.748e86ea.mp4": "/Wowanster/Piroll/static/media/Marketing_1280.748e86ea.mp4",
-    "static/media/SectionHeader.module.scss": "/Wowanster/Piroll/static/media/home-3.9bb7ccb3.jpg",
-    "static/media/photo2.41cafa3a.jpg": "/Wowanster/Piroll/static/media/photo2.41cafa3a.jpg"
+    "main.css": "/Piroll/static/css/main.c399c678.chunk.css",
+    "main.js": "/Piroll/static/js/main.7ef1c8ad.chunk.js",
+    "main.js.map": "/Piroll/static/js/main.7ef1c8ad.chunk.js.map",
+    "runtime-main.js": "/Piroll/static/js/runtime-main.a40a7a33.js",
+    "runtime-main.js.map": "/Piroll/static/js/runtime-main.a40a7a33.js.map",
+    "static/js/2.d042f92d.chunk.js": "/Piroll/static/js/2.d042f92d.chunk.js",
+    "static/js/2.d042f92d.chunk.js.map": "/Piroll/static/js/2.d042f92d.chunk.js.map",
+    "index.html": "/Piroll/index.html",
+    "static/css/main.c399c678.chunk.css.map": "/Piroll/static/css/main.c399c678.chunk.css.map",
+    "static/js/2.d042f92d.chunk.js.LICENSE.txt": "/Piroll/static/js/2.d042f92d.chunk.js.LICENSE.txt",
+    "static/media/Marketing_1280.748e86ea.mp4": "/Piroll/static/media/Marketing_1280.748e86ea.mp4",
+    "static/media/SectionHeader.module.scss": "/Piroll/static/media/home-3.9bb7ccb3.jpg",
+    "static/media/photo2.41cafa3a.jpg": "/Piroll/static/media/photo2.41cafa3a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8ed36865.js",
-    "static/js/2.24ffc7cf.chunk.js",
-    "static/css/main.b28eab37.chunk.css",
-    "static/js/main.d9528a1c.chunk.js"
+    "static/js/runtime-main.a40a7a33.js",
+    "static/js/2.d042f92d.chunk.js",
+    "static/css/main.c399c678.chunk.css",
+    "static/js/main.7ef1c8ad.chunk.js"
   ]
 }
