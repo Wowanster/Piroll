@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Need.module.scss";
-import { Field, reduxForm } from "redux-form";
+import { Field, reduxForm, reset } from "redux-form";
+import { connect } from "react-redux";
 import {
   requaired,
   maxlength,
@@ -62,6 +63,7 @@ const ReduxFormMessage = reduxForm({
 const Need = (props) => {
   let onSubmit = (formData) => {
     console.log(formData);
+    props.dispatch(reset("formMessage"));
   };
 
   return (
@@ -80,4 +82,4 @@ const Need = (props) => {
   );
 };
 
-export default Need;
+export default connect()(Need);
